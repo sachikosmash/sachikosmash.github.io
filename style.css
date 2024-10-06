@@ -1,0 +1,74 @@
+/* Imported font below from google fonts has a retro aesthetic which suits the overall alienated theme of the video. This will only be used as the Header*/ 
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+/* Imported font below is Cairo font which has a bit of red to pop out. This will be used as the body text */
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Sixtyfour+Convergence&display=swap');
+
+.sixtyfour-convergence-h1 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cairo-play-h2 {
+    font-family: "Cairo Play", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo Play, sans-serif";
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: aliceblue;
+    z-index: 2;
+}
+
+.showcase header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.menu {
+    
+}
