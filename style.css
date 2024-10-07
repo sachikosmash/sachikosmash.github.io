@@ -43,7 +43,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Cairo Play, sans-serif"; 
+    font-family: "Cairo Play", sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+    max-width: 800px;
 }
 
 .showcase {
@@ -184,7 +190,7 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
 }
 
 .cairo-play-menu ul li a:hover {
-    color: aquamarine;
+    color: rgb(187, 96, 43);
 }
 
 @media(max-width: 991px) {
