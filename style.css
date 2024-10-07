@@ -8,7 +8,7 @@
 } /* this overlay color is for backup colours */
 .sixtyfour-convergence-h1 {
     font-family: "Sixtyfour Convergence", sans-serif;
-    font-optical-sizing: auto;
+    font-optical-sizing: 6em;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
