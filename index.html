@@ -20,37 +20,19 @@
         </header>
 <!---Note to Myself: Use media player class for the cutom video controller-->
 
-        <!---<div class="media player">
-            <video id="modal">
-                <source src="modal.mp4" autoplay loop type="video/mp4"/> 
+        <div class="media-player">
+            <video id="my-video">
+                <source src="modal.mp4" controls autoplay loop type="video/mp4"/> 
             </video>
-        </div>-->
-
-        <!---<video src="modal.mp4" controls autoplay loop></video> -->
-
-        <div class="player-container">
-            <div class="video-player">
-                <video id="mediaPlayer">
-                    <source src="modal.mp4" autoplay loop type="video/mp4"/> 
-                </video>
-            </div>
-            <div class="controls">
-                <button id="playPauseBtn">Play</button>
-                <input type="range" id="seekSlider" min="0" max="100" value="0">
-                <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
-                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
-                <span id="volumeLevel">100%</span>
-                <button id="muteBtn">Mute</button>
-            </div>
         </div>
 
-        <div class="overlay"></div>
+        <video id="my-video" src="modal.mp4" controls autoplay loop></video>
+        
 
-        <div class="toggleplay">
-            <button class="glow-on-hover" type="button">START</button>
-        </div>
+        
+            <!---<button class="glow-on-hover" type="button">START</button>
 
-        <!---
+        
         THIS WAS THE INITIAL MEDIA CONTROLLER FORMAT, WHICH I WAS TRYING TO DO IN UL LI A. HOWEVER, AS I PROGRESSED FURTHER, I REALISED THIS METHOD WAS NOT EFFECTIVE AND REDUNDANT. 
         THEREFORE, COMMENTED. 
         
@@ -63,7 +45,7 @@
             <li><a href="#"><img src="volume-2.png" alt=""></a></li>
         </ul>--->
     </section> 
-
+    <section class="timeline">
     <div class="cairo-play-menu">
         <ul>
             <!---
@@ -78,14 +60,15 @@
             
             I change the menu items into buttons below here--->
 
-            <li><button id="Incubation">Incubation</button></li> 
-            <li><button id="Static">Static</button></li> 
-            <li><button id="Ripple">Ripple</button></li> 
-            <li><button id="Aurora">Aurora</button></li> 
-            <li><button id="Fireworks">Fireworks</button></li> 
-            <li><button id="Swamp">The Swamp</button></li> 
-            <li><button id="Particle">Particle World</button></li> 
+            <li><button id="step-1-btn">Incubation</button></li> 
+            <li><button id="step-2-btn">Static</button></li> 
+            <li><button id="step-3-btn">Ripple</button></li> 
+            <li><button id="step-4-btn">Aurora</button></li> 
+            <li><button id="step-5-btn">Fireworks</button></li> 
+            <li><button id="step-6-btn">The Swamp</button></li> 
+            <li><button id="step-7-btn">Particle World</button></li> 
         </ul>
     </div>
+</section>
 </body>
 </html>
