@@ -171,7 +171,7 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
 /* glow on hover CSS from codepen.io by kocsten. I thought the colourful hover button really aligns with the colourful morphic graphics of the video */
 .text {
     position: relative;
-    z-index: 10;
+    z-index: 2;
     margin: 0;
     padding: 0;
     width: 100%;
