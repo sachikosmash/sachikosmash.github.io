@@ -19,75 +19,25 @@
             <div class="toggle"></div>
         </header>
 <!---Note to Myself: Use media player class for the cutom video controller-->
-        
         </div>
-        <div class="overlay"></div>
-        <video id="myVideo" src="modal.mp4" autoplay loop></video>
+        <video id="myVideo" src="modal.mp4"></video>
         
-    </section>
-    <section class="video-title">
-        <h1>Current playtime: <span id="video-time"></span></h1>
-    </section>
-    
-    <div class="progress-bar">
-        <span id="progress-bar-fill"></span>
-        </div> 
         
-            <!---<button class="glow-on-hover" type="button">START</button>--->
-
-        
-        <!--THIS WAS THE INITIAL MEDIA CONTROLLER FORMAT, WHICH I WAS TRYING TO DO IN UL LI A. HOWEVER, AS I PROGRESSED FURTHER, I REALISED THIS METHOD WAS NOT EFFECTIVE AND REDUNDANT. 
-        THEREFORE, COMMENTED. --->
-        
-        <ul class="controls">
-            <section class="video-controls">
-            <li><button id="play-pause-btn">
-                <img
-                    id="play-pause-img"
-                    src="play.png"
-                    alt="Play Button"
-                />
-                </button></li>
-            <li><button id="mute-unmute-btn">
-                <img
-                    id="mute-unmute-img"
-                    src="volume-x.png"
-                    alt="Mute Button"
-                />
-                </button></li>
-            <li><button id="previous-btn">
-                <img
-                    id="previous-img"
-                    src="chevron-left.png"
-                    alt="Previous Button"
-                />
-                </button></li>
-            <li><button id="next-btn">
-                <img
-                    id="next-img"
-                    src="chevron-right.png"
-                    alt="Next Button"
-                />
-                </button></li>
-            <li><button id="decrease-volume-btn">
-                <img
-                    id="decrease-volume-img"
-                    src="volume-x.png"
-                    alt="Decrease volume Button"
-                />
-                </button></li>
-            <li><button id="increase-volume-btn">
-                <img
-                    id="increase-volume-img"
-                    src="volume-2.png"
-                    alt="Increase volume Button"
-                />
-                </button></li>
-            </section>
-
-
-        </ul>
+        <div class="player-container">
+            <div class="video-player" src="Modaldance.mp4">
+                <video id="mediaPlayer" src="Modaldance.mp4"></video>
+            </div>
+            <div class="controls">
+                <button class="glow1" id="play" type="button">Play</button>
+                <input type="range" id="seekSlider" min="0" max="100" value="0">
+                <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                <span id="volumeLevel">100%</span>
+                <button class= "glow1" id="mute">Mute</button>
+            </div>
+        </div>
     </section> 
+
     <div class="cairo-play-menu">
         <ul>
             <!---
