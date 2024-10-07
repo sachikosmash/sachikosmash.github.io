@@ -50,6 +50,7 @@
     "s1nt" 0;
 }
 
+
 .showcase {
     position: absolute;
     right: 0;
@@ -118,7 +119,7 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
     mix-blend-mode: overlay;
 } */
 
-.controls {
+/*.controls {
     position: absolute;
     bottom: 20px; 
     z-index: 10;
@@ -186,6 +187,77 @@ item on the list/vertical navigation bar is priority, and to indicate to the use
     text-decoration: none;
     cursor: pointer;
     outline: inherit;
+}
+
+.video-controls,
+.timeline {
+display: flex;
+gap: 1rem;
+flex-wrap: nowrap;
+  /* align-items: center; */
+}
+
+.video-controls button {
+width: 56px;
+height: 40px;
+background-color: #d5cea3;
+border: none;
+padding: 0;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+border-radius: 5px;
+}
+
+.video-controls button:hover {
+scale: 0.9;
+}
+
+.video-controls button img {
+width: 24px;
+height: 24px;
+display: block;
+}
+
+.progress-bar {
+width: 100%;
+height: 15px;
+background-color: #e5e5cb68;
+margin-top: 10px;
+overflow: hidden;
+}
+
+.progress-bar span {
+display: block;
+height: 100%;
+background-color: coral;
+width: 0;
+transition: width 0.3s ease;
+}
+.video-container {
+    position: absolute;
+    width: 10em; /* Adjust as needed */
+    height: 20em; /* Adjust as needed */
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
 }
 
 /* glow on hover CSS from codepen.io by kocsten. I thought the colourful hover button really aligns with the colourful morphic graphics of the video 
