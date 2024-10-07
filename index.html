@@ -19,18 +19,34 @@
             <div class="toggle"></div>
         </header>
 <!---Note to Myself: Use media player class for the cutom video controller-->
-        <div class="media player">
+
+        <!---<div class="media player">
             <video id="modal">
                 <source src="modal.mp4" autoplay loop type="video/mp4"/> 
             </video>
-        </div>
+        </div>-->
 
-        <video src="modal.mp4" autoplay loop></video> 
+        <!---<video src="modal.mp4" controls autoplay loop></video> -->
+
+        <div class="player-container">
+            <div class="video-player">
+                <video id="mediaPlayer">
+                    <source src="modal.mp4" autoplay loop type="video/mp4"/> 
+                </video>
+            </div>
+            <div class="controls">
+                <button id="playPauseBtn">Play</button>
+                <input type="range" id="seekSlider" min="0" max="100" value="0">
+                <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                <span id="volumeLevel">100%</span>
+                <button id="muteBtn">Mute</button>
+            </div>
+        </div>
 
         <div class="overlay"></div>
 
-        <div class="text">
-            <h2 class="cairo-play-h2"></h2>
+        <div class="toggleplay">
             <button class="glow-on-hover" type="button">START</button>
         </div>
 
@@ -50,13 +66,25 @@
 
     <div class="cairo-play-menu">
         <ul>
-            <li><a href="#">Incubation</a></li>
+            <!---
+            REMOVED UL LU A because I realised href is for when the link changes and buttons are internal
+            <li><a href="#">Incubation</a></li> 
             <li><a href="#">Static</a></li>
             <li><a href="#">Ripple</a></li>
             <li><a href="#">Aurora</a></li>
             <li><a href="#">Fireworks</a></li>
             <li><a href="#">The Swamp</a></li>
             <li><a href="#">Particle World</a></li>
+            
+            I change the menu items into buttons below here--->
+
+            <li><button id="Incubation">Incubation</button></li> 
+            <li><button id="Static">Static</button></li> 
+            <li><button id="Ripple">Ripple</button></li> 
+            <li><button id="Aurora">Aurora</button></li> 
+            <li><button id="Fireworks">Fireworks</button></li> 
+            <li><button id="Swamp">The Swamp</button></li> 
+            <li><button id="Particle">Particle World</button></li> 
         </ul>
     </div>
 </body>
