@@ -36,7 +36,6 @@
     font-style: normal;
     font-variation-settings: 
     "s1nt" 0;
-    max-width: 800px;
 }
 
 *{
@@ -49,7 +48,6 @@
     font-style: normal;
     font-variation-settings: 
     "s1nt" 0;
-    max-width: 800px;
 }
 
 .showcase {
@@ -152,14 +150,14 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
 
 .controls li a {
     display: inline-block;
-    /* filter: invert(1) change to white */
     margin-right: 20px;
-    transform: scale(0.6);
+    filter: invert(1);
+    transform: scale(0.5);
     transition: 0.5s;
 }
 
 .controls li a:hover {
-    transform: scale(0.6) translateY(-15px);
+    transform: scale(0.5) translateY(-15px);
 }
 
 .cairo-play-menu {
@@ -192,7 +190,9 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
 .cairo-play-menu ul li a:hover {
     color: rgb(187, 96, 43);
 }
-/* glow on hover CSS from 
+
+/* glow on hover CSS from codepen.io by kocsten. I thought the colourful hover button really aligns with the colourful morphic graphics of the video */
+
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -253,7 +253,7 @@ UPDATE: I fixed this by simply compressing the video as many times to be under 1
     100% { background-position: 0 0; }
 }
 
-@media(max-width: 991px) {
+/*@media(max-width: 991px) {
     .showcase,
     .showcase header {
         padding: 40px;
