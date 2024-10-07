@@ -3,6 +3,9 @@
 /* Imported font below is Cairo font which has a bit of red to pop out. This will be used as the body text */
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Sixtyfour+Convergence&display=swap');
 
+:root {
+    --overlay-color: #111
+} /* this overlay color is for backup colours */
 .sixtyfour-convergence-h1 {
     font-family: "Sixtyfour Convergence", sans-serif;
     font-optical-sizing: auto;
@@ -19,18 +22,28 @@
 
 .cairo-play-h2 {
     font-family: "Cairo Play", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
+    font-size: 2em;
+    font-weight: 300;
     font-style: normal;
     font-variation-settings:
     "slnt" 0;
+}
+
+.cairo-play-p {
+    font-family: "Cairo Play", sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+    max-width: 800px;
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Cairo Play, sans-serif";
+    font-family: "Cairo Play, sans-serif"; 
 }
 
 .showcase {
@@ -44,6 +57,10 @@
     background: #111;
     color: aliceblue;
     z-index: 2;
+}
+
+.showcase.active {
+    right: 300px;
 }
 
 .showcase header {
@@ -75,7 +92,112 @@
     background-size: 25px;
     background-position: center;
 }
+/* I wanted the video to cover the whole website. Implemented object fit to cover whole video. However I realised that this was initially an iframe embed and this DOES NOT WORK
+UPDATE: I fixed this by simply compressing the video as many times to be under 100MB so I can upload to github */
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
 
-.menu {
-    
+/*.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color)
+    mix-blend-mode: overlay;
+} */
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.text a { 
+    display: inline-block;
+    font-size: 1em;
+    background-color: #111;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    background-blend-mode: 0.6;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px; 
+    z-index: 10;
+    display: flex;
+}
+
+.controls li a {
+    display: inline-block;
+    /* filter: invert(1) change to white */
+    margin-right: 20px;
+    transform: scale(0.6);
+    transition: 0.5s;
+}
+
+.controls li a:hover {
+    transform: scale(0.6) translateY(-15px);
+}
+
+.cairo-play-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cairo-play-menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.cairo-play-menu ul li a {
+    text-decoration: none;
+    font-family: "Cairo Play", sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+    color: #111;
+}
+
+.cairo-play-menu ul li a:hover {
+    color: aquamarine;
+}
+
+@media(max-width: 991px) {
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text .cairo-play-h2 {
+        font-size: 3em;
+    }
+
+    .text .cairo-play-p {
+        font-size: 1em;
+    }
 }
