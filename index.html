@@ -19,90 +19,25 @@
             <div class="toggle"></div>
         </header>
 <!---Note to Myself: Use media player class for the cutom video controller-->
-
-        <div class="media-player">
-            <video id="myVideo">
-                <source src="modal.mp4" autoplay loop type="video/mp4"/> 
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <video src="modal.mp4" autoplay loop></video>
         
-        <section class="video-list"></section>
-
-        <section class="video-list">
-        </section>
+        </div>
+        <div class="overlay"></div>
+        <video id="myVideo" src="modal.mp4" controls autoplay loop></video>
+        
     </section>
     <section class="video-title">
         <h1>Current playtime: <span id="video-time"></span></h1>
     </section>
     <section class="video-controls">
-        <button id="play-pause-btn">
-        <img
-            id="play-pause-img"
-            src="play.png"
-            alt="Play Button"
-            width="24"
-            height="24"
-        />
-        </button>
-        <button id="mute-unmute-btn">
-        <img
-            id="mute-unmute-img"
-            src="volume-x.png"
-            alt="Mute Button"
-            width="24"
-            height="24"
-        />
-        </button>
-        <button id="previous-btn">
-        <img
-            id="previous-img"
-            src="chevron-left.png"
-            alt="Previous Button"
-            width="24"
-            height="24"
-        />
-        </button>
-        <button id="next-btn">
-        <img
-            id="next-img"
-            src="chevron-right.png"
-            alt="Next Button"
-            width="24"
-            height="24"
-        />
-        </button>
-        <div class="progress-bar">
-        <span id="progress-bar-fill"></span>
-        </div>
-        <button id="decrease-volume-btn">
-        <img
-            id="decrease-volume-img"
-            src="volume-x.png"
-            alt="Decrease volume Button"
-            width="24"
-            height="24"
-        />
-        </button>
-        <button id="increase-volume-btn">
-        <img
-            id="increase-volume-img"
-            src="volume-2.png"
-            alt="Increase volume Button"
-            width="24"
-            height="24"
-        />
-        </button>
         
-            <!---<button class="glow-on-hover" type="button">START</button>
+            <button class="glow-on-hover" type="button">START</button>
 
         
-        THIS WAS THE INITIAL MEDIA CONTROLLER FORMAT, WHICH I WAS TRYING TO DO IN UL LI A. HOWEVER, AS I PROGRESSED FURTHER, I REALISED THIS METHOD WAS NOT EFFECTIVE AND REDUNDANT. 
+        <!--THIS WAS THE INITIAL MEDIA CONTROLLER FORMAT, WHICH I WAS TRYING TO DO IN UL LI A. HOWEVER, AS I PROGRESSED FURTHER, I REALISED THIS METHOD WAS NOT EFFECTIVE AND REDUNDANT. 
         THEREFORE, COMMENTED. --->
         
         <ul class="controls">
+            <section class="video-controls">
             <li> 
                 <div class="progress-bar">
                 <span id="progress-bar-fill"></span>
@@ -162,6 +97,7 @@
                     height="24"
                 />
                 </button></li>
+            </section>
 
 
         </ul>
