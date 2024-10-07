@@ -28,7 +28,7 @@ const videoName = document.querySelector("#video-name");
 const videoTime = document.querySelector("#video-time");
 const progressBar = document.querySelector("#progress-bar-fill");
 
-const step1Button = document.querySelector("#Incubation");
+const step1Button = document.querySelector("#step-1-btn");
 console.log(step1Button)
 step1Button.addEventListener("click", gotoStep1); 
 
@@ -39,7 +39,7 @@ function gotoStep1() {
     }
 }
 
-const step2Button = document.querySelector("#Static");
+const step2Button = document.querySelector("#step-2-btn");
 console.log(step2Button)
 step1Button.addEventListener("click", gotoStep2); 
 
@@ -50,7 +50,7 @@ function gotoStep2() {
     }
 }
 
-const step3Button = document.querySelector("#Ripple");
+const step3Button = document.querySelector("#step-3-btn");
 console.log(step3Button)
 step1Button.addEventListener("click", gotoStep3); 
 
@@ -61,7 +61,7 @@ function gotoStep3() {
     }
 }
 
-const step4Button = document.querySelector("#Aurora");
+const step4Button = document.querySelector("#step-4-btn");
 console.log(step4Button)
 step1Button.addEventListener("click", gotoStep4); 
 
@@ -72,7 +72,7 @@ function gotoStep4() {
     }
 }
 
-const step5Button = document.querySelector("#Fireworks");
+const step5Button = document.querySelector("#step-5-btn");
 console.log(step5Button)
 step1Button.addEventListener("click", gotoStep5); 
 
@@ -83,10 +83,10 @@ function gotoStep5() {
     }
 }
 
-const step6Button = document.querySelector("#Swamp");
+const step6Button = document.querySelector("#step-6-btn");
 console.log(step6Button)
 step1Button.addEventListener("click", gotoStep6); 
 
-const step7Button = document.querySelector("#Particle");
+const step7Button = document.querySelector("#step-7-btn");
 console.log(step7Button)
 step1Button.addEventListener("click", gotoStep7); 
