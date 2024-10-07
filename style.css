@@ -69,6 +69,13 @@
     cursor: pointer;
 }
 
+.toggle.active {
+    background: url('x.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
 .menu {
     
 }
