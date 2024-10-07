@@ -1,7 +1,9 @@
+
+// Below is the toggle to toggle active state change to open the vertical menu //
 const menuToggle = document.querySelector('.toggle');
 const showcase = document.querySelector('.showcase');
 
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', function () {
 menuToggle.classList.toggle('active');
 showcase.classList.toggle('active');
 })
