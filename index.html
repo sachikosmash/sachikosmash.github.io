@@ -22,15 +22,18 @@
         
         </div>
         <div class="overlay"></div>
-        <video id="myVideo" src="modal.mp4" controls autoplay loop></video>
+        <video id="myVideo" src="modal.mp4" autoplay loop></video>
         
     </section>
     <section class="video-title">
         <h1>Current playtime: <span id="video-time"></span></h1>
     </section>
-    <section class="video-controls">
+    
+    <div class="progress-bar">
+        <span id="progress-bar-fill"></span>
+        </div> 
         
-            <button class="glow-on-hover" type="button">START</button>
+            <!---<button class="glow-on-hover" type="button">START</button>--->
 
         
         <!--THIS WAS THE INITIAL MEDIA CONTROLLER FORMAT, WHICH I WAS TRYING TO DO IN UL LI A. HOWEVER, AS I PROGRESSED FURTHER, I REALISED THIS METHOD WAS NOT EFFECTIVE AND REDUNDANT. 
@@ -38,11 +41,6 @@
         
         <ul class="controls">
             <section class="video-controls">
-            <li> 
-                <div class="progress-bar">
-                <span id="progress-bar-fill"></span>
-                </div> 
-            </li>
             <li><button id="play-pause-btn">
                 <img
                     id="play-pause-img"
