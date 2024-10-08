@@ -8,18 +8,6 @@ menuToggle.classList.toggle('active');
 showcase.classList.toggle('active');
 })
 
-const videoList = [
-    { name: "modal", link: "modal.mp4" },
-];
-
-{
-    myVideo.pause(); // Pause the video before changing source
-    console.log(videoList[0].link);
-    myVideo.src = videoList[0].link;
-    myVideo.load(); // Load the new source
-    myVideo.play(); // Play the video
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const videoElement = document.getElementById('mediaPlayer');
     const playPauseBtn = document.getElementById('play');
@@ -42,9 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize video element
     videoElement.addEventListener('loadedmetadata', function() {
-        durationDisplay.textContent = formatTime(this.duration);
-        seekSlider.max = this.duration;
-        updateSeekPosition();
+        durationDisplay.textContent = formatTime(videoElement.duration);
+        seekSlider.max = videoElement.duration;
+        
+    });
+    
+    videoElement.addEventListener('timeupdate', function() {
+        seekSlider.value = videoElement.currentTime;
+        currentTimeDisplay.textContent = formatTime(videoElement.currentTime);
     });
 
     // Toggle play/pause
@@ -52,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isPlaying = !isPlaying;
         if (isPlaying) {
             videoElement.play();
-            playPauseBtn.textContent = '||';
+            playPauseBtn.textContent = 'Pause';
         } else {
             videoElement.pause();
             playPauseBtn.textContent = 'Play';
