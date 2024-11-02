@@ -1,0 +1,299 @@
+/* Imported font below from google fonts has a retro aesthetic which suits the overall alienated theme of the video. This will only be used as the Header*/ 
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+/* Imported font below is Cairo font which has a bit of red to pop out. This will be used as the body text */
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Sixtyfour+Convergence&display=swap');
+
+:root {
+    --overlay-color: #111
+} /* this overlay color is for backup colours */
+.sixtyfour-convergence-h1 {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: 6em;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cairo-play-h2 {
+    font-family: "Cairo Play", sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+}
+
+.cairo-play-p {
+    font-family: "Cairo Play", sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo Play", sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+}
+
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: aliceblue;
+    z-index: 2;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.showcase header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('x.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+/* I wanted the video to cover the whole website. Implemented object fit to cover whole video. However I realised that this was initially an iframe embed and this DOES NOT WORK
+UPDATE: I fixed this by simply compressing the video as many times to be under 100MB so I can upload to github */
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/*.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color)
+    mix-blend-mode: overlay;
+} */
+
+.controls {
+    position: absolute;
+    bottom: 20px; 
+    z-index: 10;
+    display: flex;
+}
+
+.controls li a {
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.controls li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+/*I want to implement a vertical navigation bar for this website. Since this website showcases my old video art that I have done, I wanted to have a catalogue/gallery experience for the user. 
+With the theory of affordances and mental models, having something that is vertical allows me to have a "top to down" effect for my users. Indicating that the top 
+item on the list/vertical navigation bar is priority, and to indicate to the user to "work their way down the navigation bar.*/
+
+.cairo-play-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cairo-play-menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.cairo-play-menu ul li a {
+    text-decoration: none;
+    font-family: "Cairo Play", sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+    color: #111;
+}
+
+.cairo-play-menu ul li button:hover {
+    color: rgb(187, 96, 43);
+}
+/* below, I implement styling on the menu items and remove default button styling to have a cohesive contemporary aesthetic */
+.cairo-play-menu button {
+    text-decoration: none;
+    font-family: "Cairo Play", sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: 
+    "s1nt" 0;
+    color: inherit; 
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.controls {
+    padding: 20px;
+    background-color: #00004400;
+    color: #ffffff;
+}
+
+button,
+input[type="range"] {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#seekSlider::-webkit-slider-thumb,
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance:inherit;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d9f5ee;
+    cursor: pointer;
+}
+.glow1:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow1:active {
+    color: #000
+}
+
+.glow1:active:after {
+    background: transparent;
+}
+
+.glow1:hover:before {
+    opacity: 1;
+}
+
+.glow1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#currentTime,
+#duration,
+#volumeLevel {
+    color: #e773d8;
+}
+
+#muteBtn {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Retro-futuristic elements */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.neon-text {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
