@@ -60,7 +60,6 @@
         <!---Users Can Rest Game Anytime using the "Rest Game" button. This will clear all instances of X or O's-->
             <button class="reset-btn">
                 <span class="reset">Reset Game</span>
-                <span class="new-game">New Game</span>
             </button>
         
         <hr>
@@ -99,14 +98,14 @@
     I used aria-hidden="true" to change the states between Play and Pause-->
     <ul class="bg-music">
         <li>
-        <button tabindex="1" class="picker-play | primary" type="button" title="Play Song">
-            <div class="picker-label">Playing</div>
+        <button tabindex="1" class="picker-play" type="button" title="Play Song">
+            <div class="picker-play">Playing</div>
             <span class="icon" aria-hidden="true">▶</span>
         </button>
         </li>
         <li>
-        <button class="picker-pause | primary" type="button" title="Pause Song">
-            <div class="picker-label">Paused</div>
+        <button class="picker-pause" type="button" title="Pause Song">
+            <div class="picker-pause">Paused</div>
             <span class="icon" aria-hidden="true">&#9728;</span>
         </button>
         </li>
