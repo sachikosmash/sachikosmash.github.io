@@ -705,7 +705,6 @@ transition:
     right .3s ease-in-out;
 }
 
-// https://codepen.io/nonsalant/pen/eYwpZRR/edfd9e9eca31e2a2a9fd83d1f909fe0c
 .hover-slide {
   background: 
     linear-gradient(var(--player-clr) 0 0) 
@@ -720,7 +719,7 @@ transition:
     --p: 100%;
     // color: #fff !important;
     color: light-dark(#000,#fff) !important;
-  }
+}
 }
 
 .built-by {
@@ -732,18 +731,18 @@ transition:
 }
 
 .info-game {
-  font-size: .75em; text-align:center; color: #888; display: flex; gap: .25rem; flex-wrap: wrap; margin-block: 0.25rem;
-  // .remaining-life { background: #222; border-radius: 5px; padding-inline: .75ch; }
+    font-size: .75em; text-align:center; color: #888; display: flex; gap: .25rem; flex-wrap: wrap; margin-block: 0.25rem;
+    /* .remaining-life { background: #222; border-radius: 5px; padding-inline: .75ch; }*/
 }
 
 .marked {
-  opacity: 0;
-  transition: opacity .6s var(--back-out);
+    opacity: 0;
+    transition: opacity .6s var(--back-out);
 }
 
 .game-status {
-  // outline: solid 1px red;
-  max-height: 1rem;
+    /*outline: solid 1px red;*/
+    max-height: 1rem;
 }
 
 .player-2, .player-1 {
