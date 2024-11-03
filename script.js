@@ -158,18 +158,6 @@ document.querySelectorAll(".xo td").forEach((item, index) => {
         return document.querySelector(`.xo tr:nth-child(${newRow}) td:nth-child(${newCol})`);
     };
 
-    // Directional mapping for navigation keys
-    const directionMap = {
-        ArrowDown: [1, 0],
-        ArrowUp: [-1, 0],
-        ArrowLeft: [0, -1],
-        ArrowRight: [0, 1],
-        w: [-1, 0],
-        s: [1, 0],
-        a: [0, -1],
-        d: [0, 1]
-    };
-
     const adjustment = directionMap[e.key];
     if (adjustment) {
         getNextCell(adjustment[0], adjustment[1]).focus();
@@ -200,7 +188,6 @@ document.querySelector(".reset-btn").addEventListener("click", e=>{
 document.querySelector(".ttt-winner")?.addEventListener("click", function(e) {
 const el = e.target.closest("img");
 el.classList.add("not-shown"); 
-document.querySelector(".pyro").style.opacity = 0;
 });
 document.querySelector(".ttt-winner")?.addEventListener("keydown", function(e) {
 const el = e.target.closest("img");
