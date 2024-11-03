@@ -5,8 +5,6 @@ document.addEventListener("mousemove", (e) => {
     grid.style.setProperty("--y", e.y + "px");
 });
 
-///
-
 // tic-tac-toe 
 
 class LimitedArray {
@@ -184,16 +182,25 @@ document.querySelector(".reset-btn").addEventListener("click", e=>{
 });
 
 
-// display winner gif
+// Add click listener to hide image
 document.querySelector(".ttt-winner")?.addEventListener("click", function(e) {
-const el = e.target.closest("img");
-el.classList.add("not-shown"); 
+    const el = e.target.closest(".img");
+    if (el) {  // Check if `el` eists before adding the class
+        el.classList.add("not-shown");
+    }
 });
+
+// Add keyboard accessibility for image
 document.querySelector(".ttt-winner")?.addEventListener("keydown", function(e) {
-const el = e.target.closest("img");
-if (e.key === " " || e.key === "Enter") {
-    el.click();
-    e.preventDefault();
-    return;
-}
+    const el = e.target.closest("img");
+    if (el && (e.key === " " || e.key === "Enter")) {  // Ensure `el` exists before calling click
+        el.click();
+        e.preventDefault();
+    }
 });
+/* checking if clas .ttt-winner is present in the DOM*/
+if (document.querySelector('.ttt-winner')) {
+    console.log('Class is present in the DOM');
+} else {
+    console.log('Class is not present in the DOM');
+}
