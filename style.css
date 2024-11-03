@@ -1,0 +1,86 @@
+/* 
+MY DESIGN INTENTION 
+For this project, I wanted to have fun with a "girly-cute" aesthetic, featuring pastel colours and rounder shapes.*/
+
+/*The Heading font is called Gorditas. Featuring rounder edges and a handwritten aesthetic.*/
+@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
+/*Whereas the body font is called Delius. Which is similar to Gorditas, however, more of a print typeface for easier readability*/
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap'); 
+
+/*Import of 2 Fonts. One font is for emphasised headings and another is for the body. I initially wanted the heading font to be 
+used throughout the whole project, however, it is illegible when the font is scaled down.
+
+I used Google font to source both fonts.*/
+
+/* below is the styling when rest button is initiated*/
+@layer reset {
+    *, *:before, *:after { box-sizing: border-box; }
+    img { max-width: 100%; }
+}
+
+html {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center top;
+    padding: 1rem;
+    font-family: "Delius", crusive;
+    font-size: 1rem;
+    
+body {
+    display: grid;
+    gap: 1.5rem;
+    color: light-dark(#333, #aaa);
+    color: light-dark(#444, #999);
+    max-width: min(40rem, 100%);
+    width: fit-content;
+    width: min(100%, 42ch);
+    width: min(100%, 42ch);
+    margin: auto;
+    text-align: center;
+    padding-block: .5rem .5rem;
+    }
+}
+/*2nd Body Reset Below/ Initial Body Style Above*/
+body { 
+	overflow: auto;
+	position: relative;
+	display: grid;
+	place-content: center;
+	width: 10rem;
+	margin: auto;
+	gap: 1rem;
+	min-height: 90dvh;
+	text-align: center;
+	> * { transition: all .3s var(--back-out); }
+}
+/*heading for "Cutesy TicTacToe*/
+h1 {
+    --player-1-clr: light-dark( oklch(0.5 0.15 200 / 1), oklch(0.7 0.07 200 / 1) );
+    --player-2-clr: light-dark( oklch(0.75 0.20 20 / 1), oklch(0.7 0.15 20 / 1) );
+    --player-clr: var(--player-1-clr);
+    font-family: "Gorditas", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-block: 0;
+    padding-block: 0;
+    opacity: .6;
+    display: grid;
+    gap: .2rem;
+    position: relative;
+    color: light-dark(#000, #ccc);
+}
+body:has(.player-2s-turn) h1 {
+    --player-clr: var(--player-2-clr);
+}
+
+h1 small {
+    font-family: "Gorditas", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: .5em;
+    color: #888888;
+    color: light-dark(#555, #777);
+}
+
