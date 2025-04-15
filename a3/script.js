@@ -2,6 +2,7 @@
 // Below is the toggle to toggle active state change to open the vertical menu //
 const menuToggle = document.querySelector('.toggle');
 const showcase = document.querySelector('.showcase');
+const videoElement = document.getElementById('mediaPlayer');
 
 // const progressFill = 
 
@@ -215,7 +216,7 @@ if (currentTime < duration) {
 updateProgress();
 
 // Update progress bar as video plays
-videoPlayer.addEventListener('timeupdate', () => {
+videoElement.addEventListener('timeupdate', () => {
 currentTime = videoPlayer.currentTime;
   const newPercentage = (currentTime / duration) * 100;
 // progressFill.style.height = `${newPercentage}%`;
